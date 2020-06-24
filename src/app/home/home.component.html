@@ -1,0 +1,21 @@
+<h1>Welcome!</h1>
+<div class="container">
+        <p>You've clicked <span (click)="countClick()" class="btn btn-danger"> {{ clickCounter }} times</span></p>
+</div>
+
+
+<div class="container" [class.vip]="clickCounter > 21">
+  <ng-template [ngIf]="clickCounter > 21" [ngIfElse]="none">
+          <p>VIP!</p>
+  </ng-template>
+  <ng-template #none>
+          <p>The clickCounter is <b>SMALLER</b>than 21.</p>
+
+  </ng-template>
+</div>
+
+<div *ngFor="let car of cars">
+  <p>{{car.name}}</p>
+  <!-- <p>{{car.img}}</p> -->
+</div>
+

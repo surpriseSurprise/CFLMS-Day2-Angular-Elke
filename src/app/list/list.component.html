@@ -1,0 +1,32 @@
+<div class="container">
+  <form [formGroup]="contact" (ngSubmit)="addMessage()">
+
+    <label>
+         First Name:
+         <input type="text" formControlName="firstName">
+     </label>
+     <br>
+     <label>
+         Last Name:
+         <input type="text" formControlName="lastName">
+     </label>
+     <br>
+     <label>
+         Age:
+         <input type="text" formControlName="age">
+     </label>
+     <br>
+     <label>
+        Email:
+         <input type="text" formControlName="email">
+     </label>
+     <br>
+     <label>
+        Message:
+         <textarea name="" formControlName="message"></textarea>
+     </label>
+     <br>
+     <input type="submit" class="btn btn-primary" value="Submit">
+
+  </form>
+  </div>
